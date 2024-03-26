@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wasm.Theme", "src\Wasm.Theme.csproj", "{2C8EB51E-C4BE-4D1D-9D48-04B3DB8E6680}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wasm.Theme.Test", "test\Wasm.Theme.Test.csproj", "{20AA0961-112B-40F2-9198-ADE5CB6885C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wasm.LocalStorage", "..\Wasm.LocalStorage\src\Wasm.LocalStorage.csproj", "{63131AF0-5DF5-48F5-87B6-0922F0806544}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C8EB51E-C4BE-4D1D-9D48-04B3DB8E6680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C8EB51E-C4BE-4D1D-9D48-04B3DB8E6680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C8EB51E-C4BE-4D1D-9D48-04B3DB8E6680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C8EB51E-C4BE-4D1D-9D48-04B3DB8E6680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20AA0961-112B-40F2-9198-ADE5CB6885C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20AA0961-112B-40F2-9198-ADE5CB6885C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20AA0961-112B-40F2-9198-ADE5CB6885C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20AA0961-112B-40F2-9198-ADE5CB6885C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63131AF0-5DF5-48F5-87B6-0922F0806544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63131AF0-5DF5-48F5-87B6-0922F0806544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63131AF0-5DF5-48F5-87B6-0922F0806544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63131AF0-5DF5-48F5-87B6-0922F0806544}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,53 @@
+﻿@page "/"
+<div style="display: flex; min-height: 100vh; align-items: center; justify-content: center; text-align: center;">
+    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+        <h1>Theme</h1>
+
+        <label>Current Theme</label>
+        <p>@ThemeManager.CurrentTheme</p>
+
+        <label>User Theme</label>
+        <p>@ThemeManager.UserTheme</p>
+
+        <label>System Theme</label>
+        <p>@ThemeManager.SystemTheme</p>
+
+
+        <button type="button" @onclick="SetThemeAuto">Set Auto Theme</button>
+        <button type="button" @onclick="SetThemeLight">Set Light Theme</button>
+        <button type="button" @onclick="SetThemeDark">Set Dark Theme</button>
+
+    </div>
+</div>
+@implements IAsyncDisposable
+@inject IThemeManager ThemeManager
+
+@code {
+    private const string Auto = "Auto";
+    private const string Light = "Light";
+    private const string Dark = "Dark";
+
+    protected override Task OnInitializedAsync()
+    {
+        ThemeManager.ThemeChanged += NotifyStateChanged;
+        return base.OnInitializedAsync();
+    }
+
+    private async Task SetThemeDark() => await ThemeManager.SetUserPreferredThemeAsync(Dark);
+
+    private async Task SetThemeLight() => await ThemeManager.SetUserPreferredThemeAsync(Light);
+
+    private async Task SetThemeAuto() => await ThemeManager.SetUserPreferredThemeAsync(Auto);
+
+    private async void NotifyStateChanged(object? sender, EventArgs empty)
+    {
+        await InvokeAsync(StateHasChanged);
+    }
+    
+    public ValueTask DisposeAsync()
+    {
+        ThemeManager.ThemeChanged -= NotifyStateChanged;
+        return ValueTask.CompletedTask;
+    }
+
+}
